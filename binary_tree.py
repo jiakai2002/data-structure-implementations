@@ -84,14 +84,14 @@ class BinarySearchTreeNode:
         if self.data == val:
             return True
         # search right subtree
-        elif self.data > val:
+        elif val > self.data:
             if self.right:
                 return self.right.search(val)
             # right subtree empty
             else:
                 return False
         # search left subtree
-        elif self.data < val:
+        elif val < self.data:
             if self.left:
                 return self.left.search(val)
             # left subtree empty
@@ -136,7 +136,8 @@ if __name__ == "__main__":
     print(numbers_tree.pre_order_traversal())
     print(numbers_tree.in_order_traversal())
     print(numbers_tree.post_order_traversal())
-    print(numbers_tree.search(11))
+    print(numbers_tree.search(12))
     print(numbers_tree.find_min())
     print(numbers_tree.find_max())
     print(numbers_tree.find_sum())
+    print(numbers_tree.search(7))
